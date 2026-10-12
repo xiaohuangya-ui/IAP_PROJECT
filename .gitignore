@@ -1,0 +1,29 @@
+# Local, read-only historical projects; never link these into product targets.
+/IAP_REFERENCE/
+
+# Keil intermediate outputs and per-user settings. Keep .ioc/.uvprojx/.uvoptx/.sct.
+*.uvguix.*
+*.o
+*.obj
+*.crf
+*.d
+*.lnp
+*.dep
+*.bak
+*.build_log.htm
+/Bootloader/MDK-ARM/**/*.axf
+/Bootloader/MDK-ARM/**/*.hex
+/Bootloader/MDK-ARM/**/*.bin
+/Bootloader/MDK-ARM/**/*.map
+/Bootloader/MDK-ARM/**/*.lst
+/Application/MDK-ARM/**/*.axf
+/Application/MDK-ARM/**/*.hex
+/Application/MDK-ARM/**/*.bin
+/Application/MDK-ARM/**/*.map
+/Application/MDK-ARM/**/*.lst
+
+# Intentionally retained release/test evidence is tracked under Evidence/.
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
