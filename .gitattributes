@@ -1,0 +1,3 @@
+# Preserve original bytes, including AC5 source encodings and recorded hashes.
+# Do not let a clone silently translate CRLF/LF in source or sealed evidence.
+* -text

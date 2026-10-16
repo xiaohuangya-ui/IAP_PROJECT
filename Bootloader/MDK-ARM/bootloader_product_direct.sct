@@ -1,0 +1,23 @@
+LR_IROM1 0x08000000 0x4000 {
+  ER_IROM1 0x08000000 0x4000 {
+    *.o (RESET, +First)
+    .ANY (+RO)
+  }
+  ER_FLASH_RAM 0x20000000 NOCOMPRESS 0x400 {
+    internal_flash_hw.o (FLASH_RAM_CODE)
+  }
+  RW_IRAM1 0x20000400 NOCOMPRESS 0x4C00 {
+    startup_product.o (STACK, +Last)
+    .ANY (+RW +ZI)
+  }
+}
+
+; Product direct initialization requires word-aligned regions.
+ScatterAssert(AlignExpr(ImageBase(ER_FLASH_RAM), 4) == ImageBase(ER_FLASH_RAM))
+ScatterAssert(AlignExpr(LoadBase(ER_FLASH_RAM), 4) == LoadBase(ER_FLASH_RAM))
+ScatterAssert(AlignExpr(ImageLength(ER_FLASH_RAM), 4) == ImageLength(ER_FLASH_RAM))
+ScatterAssert(AlignExpr(ImageBase(RW_IRAM1), 4) == ImageBase(RW_IRAM1))
+ScatterAssert(AlignExpr(LoadBase(RW_IRAM1), 4) == LoadBase(RW_IRAM1))
+ScatterAssert(AlignExpr(LoadLength(RW_IRAM1), 4) == LoadLength(RW_IRAM1))
+ScatterAssert(AlignExpr(ImageLength(RW_IRAM1), 4) == ImageLength(RW_IRAM1))
+ScatterAssert(LoadBase(RW_IRAM1) == LoadLimit(ER_FLASH_RAM))

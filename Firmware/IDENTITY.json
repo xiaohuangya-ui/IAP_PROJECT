@@ -1,0 +1,79 @@
+{
+  "result": "PASS_OFFLINE",
+  "builds": [
+    {
+      "target": "BOOT_RELEASE",
+      "Code": 15990,
+      "RO": 366,
+      "RW": 16,
+      "ZI": 9840,
+      "ROM": 16372,
+      "RAM": 9856,
+      "MSP": "0x20002a80",
+      "Reset": "0x8000e95",
+      "sha256": "6b03190cecb2989f6a4186dd5dbf0e5a4f6062849b34b60dbe7f8324d0a04ec2",
+      "compiler": "AC5.06u7 build960",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "target": "APP_V1_RELEASE",
+      "Code": 24284,
+      "RO": 712,
+      "RW": 248,
+      "ZI": 12920,
+      "ROM": 25244,
+      "RAM": 13168,
+      "MSP": "0x20003370",
+      "Reset": "0x800419d",
+      "sha256": "60e4412d57eb91789d72ca08512a0defeffcfda2e220756e37a281de13ebf535",
+      "compiler": "AC5.06u7 build960",
+      "errors": 0,
+      "warnings": 0,
+      "old_sha256": "f68b66978f2513941ca26af75a558da75a4cfab06f6fc4f115abb36927861fd9",
+      "changed_bytes": 24145,
+      "package": {
+        "scope": "Packaging only; source App AXF/MAP origin must be audited separately",
+        "base": "0x8004000",
+        "version": "0x10000",
+        "image_size": 25244,
+        "file_size": 25276,
+        "image_crc32": "0xa3f41dbb",
+        "input_sha256": "60e4412d57eb91789d72ca08512a0defeffcfda2e220756e37a281de13ebf535",
+        "output_sha256": "55ca4c371a8647f6fa10d2f2071066c659fb67e7681469311c8923515a1269ee"
+      }
+    },
+    {
+      "target": "APP_V2_RELEASE",
+      "Code": 24644,
+      "RO": 740,
+      "RW": 248,
+      "ZI": 13040,
+      "ROM": 25632,
+      "RAM": 13288,
+      "MSP": "0x200033e8",
+      "Reset": "0x800419d",
+      "sha256": "99015f0512fa9d13cc52d99d97f4ccb6c7785267fc643ff2faddec7808def81f",
+      "compiler": "AC5.06u7 build960",
+      "errors": 0,
+      "warnings": 0,
+      "old_sha256": "9ffeee4285dbb90e4c90429d4290e7c8d425e02062498fd7e4c07a7464b4e398",
+      "changed_bytes": 24562,
+      "package": {
+        "scope": "Packaging only; source App AXF/MAP origin must be audited separately",
+        "base": "0x8004000",
+        "version": "0x20000",
+        "image_size": 25632,
+        "file_size": 25664,
+        "image_crc32": "0xeb5bcf66",
+        "input_sha256": "99015f0512fa9d13cc52d99d97f4ccb6c7785267fc643ff2faddec7808def81f",
+        "output_sha256": "85a4eaa2de02c423717b309b0174cac99f4ac79a258c364987112e98313834ee"
+      }
+    }
+  ],
+  "regression_groups": 14,
+  "legacy_task_scenarios": 39,
+  "history_task_scenarios": 49,
+  "hardware": "User-provided serial observations: V2 NORMAL, history SEQ2..5 retained after reset, subsequent SEQ6; temperature conversion abnormal. No independent readback of this new image.",
+  "scope": "Current firmware; Boot bytes unchanged. Build and host validation are separate from hardware acceptance."
+}

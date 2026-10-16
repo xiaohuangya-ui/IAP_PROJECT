@@ -1,0 +1,10 @@
+{
+  "scope": "Packaging only; source App AXF/MAP origin must be audited separately",
+  "base": "0x8004000",
+  "version": "0x10000",
+  "image_size": 25244,
+  "file_size": 25276,
+  "image_crc32": "0xa3f41dbb",
+  "input_sha256": "60e4412d57eb91789d72ca08512a0defeffcfda2e220756e37a281de13ebf535",
+  "output_sha256": "55ca4c371a8647f6fa10d2f2071066c659fb67e7681469311c8923515a1269ee"
+}
